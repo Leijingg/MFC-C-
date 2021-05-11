@@ -1,0 +1,560 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\HP\Desktop\³¬Éù²¨\csb.uvproj
+Project File Date:  04/27/2021
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 000DH
+Program Size: data=9.0 xdata=0 code=15
+"csb" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 000DH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "csb"...
+"csb" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 000DH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "csb"...
+"csb" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 000DH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "csb"...
+"csb" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+D:\KEIL\C51\INC\ATMEL\REG51.H(13): error C231: 'P0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(14): error C231: 'P1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(15): error C231: 'P2': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(16): error C231: 'P3': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(17): error C231: 'PSW': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(18): error C231: 'ACC': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(19): error C231: 'B': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(20): error C231: 'SP': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(21): error C231: 'DPL': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(22): error C231: 'DPH': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(23): error C231: 'PCON': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(24): error C231: 'TCON': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(25): error C231: 'TMOD': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(26): error C231: 'TL0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(27): error C231: 'TL1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(28): error C231: 'TH0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(29): error C231: 'TH1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(30): error C231: 'IE': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(31): error C231: 'IP': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(32): error C231: 'SCON': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(33): error C231: 'SBUF': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(38): error C231: 'CY': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(39): error C231: 'AC': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(40): error C231: 'F0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(41): error C231: 'RS1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(42): error C231: 'RS0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(43): error C231: 'OV': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(44): error C231: 'P': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(47): error C231: 'TF1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(48): error C231: 'TR1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(49): error C231: 'TF0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(50): error C231: 'TR0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(51): error C231: 'IE1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(52): error C231: 'IT1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(53): error C231: 'IE0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(54): error C231: 'IT0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(57): error C231: 'EA': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(58): error C231: 'ES': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(59): error C231: 'ET1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(60): error C231: 'EX1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(61): error C231: 'ET0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(62): error C231: 'EX0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(65): error C231: 'PS': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(66): error C231: 'PT1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(67): error C231: 'PX1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(68): error C231: 'PT0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(69): error C231: 'PX0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(72): error C231: 'RD': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(73): error C231: 'WR': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(74): error C231: 'T1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(75): error C231: 'T0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(76): error C231: 'INT1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(77): error C231: 'INT0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(78): error C231: 'TXD': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(79): error C231: 'RXD': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(82): error C231: 'SM0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(83): error C231: 'SM1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(84): error C231: 'SM2': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(85): error C231: 'REN': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(86): error C231: 'TB8': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(87): error C231: 'RB8': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(88): error C231: 'TI': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(89): error C231: 'RI': redefinition
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+CSB.C(51): warning C206: 'SectorErase': missing function-prototype
+CSB.C(51): error C267: 'SectorErase': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling csb.c...
+CSB.C(51): warning C206: 'SectorErase': missing function-prototype
+CSB.C(51): error C267: 'SectorErase': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+CSB.C(51): warning C206: 'SectorErase': missing function-prototype
+CSB.C(51): error C267: 'SectorErase': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+csb.c(2): warning C315: unknown #directive 'type'
+csb.c(3): warning C315: unknown #directive 'type'
+CSB.C(7): error C129: missing ';' before 'code'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+csb.c(2): warning C315: unknown #directive 'typedef'
+csb.c(3): warning C315: unknown #directive 'typedef'
+CSB.C(7): error C129: missing ';' before 'code'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+CSB.C(2): error C129: missing ';' before 'unsigned'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+CSB.C(2): error C129: missing ';' before 'unsigned'
+Target not created
+Build target 'Target 1'
+compiling csb.c...
+CSB.C(7): error C129: missing ';' before 'code'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+CSB.C(7): error C129: missing ';' before 'code'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+CSB.C(51): warning C206: 'SectorErase': missing function-prototype
+CSB.C(51): error C267: 'SectorErase': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+CSB.C(51): warning C206: 'SectorErase': missing function-prototype
+CSB.C(51): error C267: 'SectorErase': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+D:\KEIL\C51\INC\ATMEL\REGX51.H(15): error C231: 'P0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(16): error C231: 'SP': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(17): error C231: 'DPL': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(18): error C231: 'DPH': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(19): error C231: 'PCON': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(20): error C231: 'TCON': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(21): error C231: 'TMOD': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(22): error C231: 'TL0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(23): error C231: 'TL1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(24): error C231: 'TH0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(25): error C231: 'TH1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(26): error C231: 'P1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(27): error C231: 'SCON': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(28): error C231: 'SBUF': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(29): error C231: 'P2': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(30): error C231: 'IE': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(31): error C231: 'P3': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(32): error C231: 'IP': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(33): error C231: 'PSW': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(34): error C231: 'ACC': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(35): error C231: 'B': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(65): error C231: 'IT0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(66): error C231: 'IE0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(67): error C231: 'IT1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(68): error C231: 'IE1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(69): error C231: 'TR0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(70): error C231: 'TF0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(71): error C231: 'TR1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(72): error C231: 'TF1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(104): error C231: 'RI': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(105): error C231: 'TI': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(106): error C231: 'RB8': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(107): error C231: 'TB8': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(108): error C231: 'REN': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(109): error C231: 'SM2': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(110): error C231: 'SM1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(111): error C231: 'SM0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(128): error C231: 'EX0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(129): error C231: 'ET0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(130): error C231: 'EX1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(131): error C231: 'ET1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(132): error C231: 'ES': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(135): error C231: 'EA': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(149): error C231: 'RXD': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(150): error C231: 'TXD': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(151): error C231: 'INT0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(152): error C231: 'INT1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(153): error C231: 'T0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(154): error C231: 'T1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(155): error C231: 'WR': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(156): error C231: 'RD': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(161): error C231: 'PX0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(162): error C231: 'PT0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(163): error C231: 'PX1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(164): error C231: 'PT1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(165): error C231: 'PS': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(171): error C231: 'P': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(173): error C231: 'OV': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(174): error C231: 'RS0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(175): error C231: 'RS1': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(176): error C231: 'F0': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(177): error C231: 'AC': redefinition
+D:\KEIL\C51\INC\ATMEL\REGX51.H(178): error C231: 'CY': redefinition
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+D:\KEIL\C51\INC\ATMEL\REG51.H(13): error C231: 'P0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(14): error C231: 'P1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(15): error C231: 'P2': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(16): error C231: 'P3': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(17): error C231: 'PSW': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(18): error C231: 'ACC': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(19): error C231: 'B': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(20): error C231: 'SP': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(21): error C231: 'DPL': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(22): error C231: 'DPH': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(23): error C231: 'PCON': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(24): error C231: 'TCON': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(25): error C231: 'TMOD': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(26): error C231: 'TL0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(27): error C231: 'TL1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(28): error C231: 'TH0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(29): error C231: 'TH1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(30): error C231: 'IE': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(31): error C231: 'IP': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(32): error C231: 'SCON': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(33): error C231: 'SBUF': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(38): error C231: 'CY': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(39): error C231: 'AC': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(40): error C231: 'F0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(41): error C231: 'RS1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(42): error C231: 'RS0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(43): error C231: 'OV': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(44): error C231: 'P': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(47): error C231: 'TF1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(48): error C231: 'TR1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(49): error C231: 'TF0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(50): error C231: 'TR0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(51): error C231: 'IE1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(52): error C231: 'IT1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(53): error C231: 'IE0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(54): error C231: 'IT0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(57): error C231: 'EA': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(58): error C231: 'ES': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(59): error C231: 'ET1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(60): error C231: 'EX1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(61): error C231: 'ET0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(62): error C231: 'EX0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(65): error C231: 'PS': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(66): error C231: 'PT1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(67): error C231: 'PX1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(68): error C231: 'PT0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(69): error C231: 'PX0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(72): error C231: 'RD': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(73): error C231: 'WR': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(74): error C231: 'T1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(75): error C231: 'T0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(76): error C231: 'INT1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(77): error C231: 'INT0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(78): error C231: 'TXD': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(79): error C231: 'RXD': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(82): error C231: 'SM0': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(83): error C231: 'SM1': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(84): error C231: 'SM2': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(85): error C231: 'REN': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(86): error C231: 'TB8': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(87): error C231: 'RB8': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(88): error C231: 'TI': redefinition
+D:\KEIL\C51\INC\ATMEL\REG51.H(89): error C231: 'RI': redefinition
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+CSB.C(52): warning C206: 'SectorErase': missing function-prototype
+CSB.C(52): error C267: 'SectorErase': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+CSB.C(51): error C236: '_IapEraseSector': different length of parameter lists
+Target not created
+Build target 'Target 1'
+compiling csb.c...
+csb.c(5): warning C318: can't open file 'eeprom.h'
+CSB.C(52): warning C206: 'SectorErase': missing function-prototype
+CSB.C(52): error C267: 'SectorErase': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+CSB.C(52): warning C206: 'SectorErase': missing function-prototype
+CSB.C(52): error C267: 'SectorErase': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+D:\KEIL\C51\INC\REG52.H(13): error C231: 'P0': redefinition
+D:\KEIL\C51\INC\REG52.H(14): error C231: 'P1': redefinition
+D:\KEIL\C51\INC\REG52.H(15): error C231: 'P2': redefinition
+D:\KEIL\C51\INC\REG52.H(16): error C231: 'P3': redefinition
+D:\KEIL\C51\INC\REG52.H(17): error C231: 'PSW': redefinition
+D:\KEIL\C51\INC\REG52.H(18): error C231: 'ACC': redefinition
+D:\KEIL\C51\INC\REG52.H(19): error C231: 'B': redefinition
+D:\KEIL\C51\INC\REG52.H(20): error C231: 'SP': redefinition
+D:\KEIL\C51\INC\REG52.H(21): error C231: 'DPL': redefinition
+D:\KEIL\C51\INC\REG52.H(22): error C231: 'DPH': redefinition
+D:\KEIL\C51\INC\REG52.H(23): error C231: 'PCON': redefinition
+D:\KEIL\C51\INC\REG52.H(24): error C231: 'TCON': redefinition
+D:\KEIL\C51\INC\REG52.H(25): error C231: 'TMOD': redefinition
+D:\KEIL\C51\INC\REG52.H(26): error C231: 'TL0': redefinition
+D:\KEIL\C51\INC\REG52.H(27): error C231: 'TL1': redefinition
+D:\KEIL\C51\INC\REG52.H(28): error C231: 'TH0': redefinition
+D:\KEIL\C51\INC\REG52.H(29): error C231: 'TH1': redefinition
+D:\KEIL\C51\INC\REG52.H(30): error C231: 'IE': redefinition
+D:\KEIL\C51\INC\REG52.H(31): error C231: 'IP': redefinition
+D:\KEIL\C51\INC\REG52.H(32): error C231: 'SCON': redefinition
+D:\KEIL\C51\INC\REG52.H(33): error C231: 'SBUF': redefinition
+D:\KEIL\C51\INC\REG52.H(45): error C231: 'CY': redefinition
+D:\KEIL\C51\INC\REG52.H(46): error C231: 'AC': redefinition
+D:\KEIL\C51\INC\REG52.H(47): error C231: 'F0': redefinition
+D:\KEIL\C51\INC\REG52.H(48): error C231: 'RS1': redefinition
+D:\KEIL\C51\INC\REG52.H(49): error C231: 'RS0': redefinition
+D:\KEIL\C51\INC\REG52.H(50): error C231: 'OV': redefinition
+D:\KEIL\C51\INC\REG52.H(51): error C231: 'P': redefinition
+D:\KEIL\C51\INC\REG52.H(54): error C231: 'TF1': redefinition
+D:\KEIL\C51\INC\REG52.H(55): error C231: 'TR1': redefinition
+D:\KEIL\C51\INC\REG52.H(56): error C231: 'TF0': redefinition
+D:\KEIL\C51\INC\REG52.H(57): error C231: 'TR0': redefinition
+D:\KEIL\C51\INC\REG52.H(58): error C231: 'IE1': redefinition
+D:\KEIL\C51\INC\REG52.H(59): error C231: 'IT1': redefinition
+D:\KEIL\C51\INC\REG52.H(60): error C231: 'IE0': redefinition
+D:\KEIL\C51\INC\REG52.H(61): error C231: 'IT0': redefinition
+D:\KEIL\C51\INC\REG52.H(64): error C231: 'EA': redefinition
+D:\KEIL\C51\INC\REG52.H(65): error C231: 'ET2': redefinition
+D:\KEIL\C51\INC\REG52.H(66): error C231: 'ES': redefinition
+D:\KEIL\C51\INC\REG52.H(67): error C231: 'ET1': redefinition
+D:\KEIL\C51\INC\REG52.H(68): error C231: 'EX1': redefinition
+D:\KEIL\C51\INC\REG52.H(69): error C231: 'ET0': redefinition
+D:\KEIL\C51\INC\REG52.H(70): error C231: 'EX0': redefinition
+D:\KEIL\C51\INC\REG52.H(73): error C231: 'PT2': redefinition
+D:\KEIL\C51\INC\REG52.H(74): error C231: 'PS': redefinition
+D:\KEIL\C51\INC\REG52.H(75): error C231: 'PT1': redefinition
+D:\KEIL\C51\INC\REG52.H(76): error C231: 'PX1': redefinition
+D:\KEIL\C51\INC\REG52.H(77): error C231: 'PT0': redefinition
+D:\KEIL\C51\INC\REG52.H(78): error C231: 'PX0': redefinition
+D:\KEIL\C51\INC\REG52.H(81): error C231: 'RD': redefinition
+D:\KEIL\C51\INC\REG52.H(82): error C231: 'WR': redefinition
+D:\KEIL\C51\INC\REG52.H(83): error C231: 'T1': redefinition
+D:\KEIL\C51\INC\REG52.H(84): error C231: 'T0': redefinition
+D:\KEIL\C51\INC\REG52.H(85): error C231: 'INT1': redefinition
+D:\KEIL\C51\INC\REG52.H(86): error C231: 'INT0': redefinition
+D:\KEIL\C51\INC\REG52.H(87): error C231: 'TXD': redefinition
+D:\KEIL\C51\INC\REG52.H(88): error C231: 'RXD': redefinition
+D:\KEIL\C51\INC\REG52.H(91): error C231: 'SM0': redefinition
+D:\KEIL\C51\INC\REG52.H(92): error C231: 'SM1': redefinition
+D:\KEIL\C51\INC\REG52.H(93): error C231: 'SM2': redefinition
+D:\KEIL\C51\INC\REG52.H(94): error C231: 'REN': redefinition
+D:\KEIL\C51\INC\REG52.H(95): error C231: 'TB8': redefinition
+D:\KEIL\C51\INC\REG52.H(96): error C231: 'RB8': redefinition
+D:\KEIL\C51\INC\REG52.H(97): error C231: 'TI': redefinition
+D:\KEIL\C51\INC\REG52.H(98): error C231: 'RI': redefinition
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+D:\KEIL\C51\INC\REG52.H(13): error C231: 'P0': redefinition
+D:\KEIL\C51\INC\REG52.H(14): error C231: 'P1': redefinition
+D:\KEIL\C51\INC\REG52.H(15): error C231: 'P2': redefinition
+D:\KEIL\C51\INC\REG52.H(16): error C231: 'P3': redefinition
+D:\KEIL\C51\INC\REG52.H(17): error C231: 'PSW': redefinition
+D:\KEIL\C51\INC\REG52.H(18): error C231: 'ACC': redefinition
+D:\KEIL\C51\INC\REG52.H(19): error C231: 'B': redefinition
+D:\KEIL\C51\INC\REG52.H(20): error C231: 'SP': redefinition
+D:\KEIL\C51\INC\REG52.H(21): error C231: 'DPL': redefinition
+D:\KEIL\C51\INC\REG52.H(22): error C231: 'DPH': redefinition
+D:\KEIL\C51\INC\REG52.H(23): error C231: 'PCON': redefinition
+D:\KEIL\C51\INC\REG52.H(24): error C231: 'TCON': redefinition
+D:\KEIL\C51\INC\REG52.H(25): error C231: 'TMOD': redefinition
+D:\KEIL\C51\INC\REG52.H(26): error C231: 'TL0': redefinition
+D:\KEIL\C51\INC\REG52.H(27): error C231: 'TL1': redefinition
+D:\KEIL\C51\INC\REG52.H(28): error C231: 'TH0': redefinition
+D:\KEIL\C51\INC\REG52.H(29): error C231: 'TH1': redefinition
+D:\KEIL\C51\INC\REG52.H(30): error C231: 'IE': redefinition
+D:\KEIL\C51\INC\REG52.H(31): error C231: 'IP': redefinition
+D:\KEIL\C51\INC\REG52.H(32): error C231: 'SCON': redefinition
+D:\KEIL\C51\INC\REG52.H(33): error C231: 'SBUF': redefinition
+D:\KEIL\C51\INC\REG52.H(45): error C231: 'CY': redefinition
+D:\KEIL\C51\INC\REG52.H(46): error C231: 'AC': redefinition
+D:\KEIL\C51\INC\REG52.H(47): error C231: 'F0': redefinition
+D:\KEIL\C51\INC\REG52.H(48): error C231: 'RS1': redefinition
+D:\KEIL\C51\INC\REG52.H(49): error C231: 'RS0': redefinition
+D:\KEIL\C51\INC\REG52.H(50): error C231: 'OV': redefinition
+D:\KEIL\C51\INC\REG52.H(51): error C231: 'P': redefinition
+D:\KEIL\C51\INC\REG52.H(54): error C231: 'TF1': redefinition
+D:\KEIL\C51\INC\REG52.H(55): error C231: 'TR1': redefinition
+D:\KEIL\C51\INC\REG52.H(56): error C231: 'TF0': redefinition
+D:\KEIL\C51\INC\REG52.H(57): error C231: 'TR0': redefinition
+D:\KEIL\C51\INC\REG52.H(58): error C231: 'IE1': redefinition
+D:\KEIL\C51\INC\REG52.H(59): error C231: 'IT1': redefinition
+D:\KEIL\C51\INC\REG52.H(60): error C231: 'IE0': redefinition
+D:\KEIL\C51\INC\REG52.H(61): error C231: 'IT0': redefinition
+D:\KEIL\C51\INC\REG52.H(64): error C231: 'EA': redefinition
+D:\KEIL\C51\INC\REG52.H(65): error C231: 'ET2': redefinition
+D:\KEIL\C51\INC\REG52.H(66): error C231: 'ES': redefinition
+D:\KEIL\C51\INC\REG52.H(67): error C231: 'ET1': redefinition
+D:\KEIL\C51\INC\REG52.H(68): error C231: 'EX1': redefinition
+D:\KEIL\C51\INC\REG52.H(69): error C231: 'ET0': redefinition
+D:\KEIL\C51\INC\REG52.H(70): error C231: 'EX0': redefinition
+D:\KEIL\C51\INC\REG52.H(73): error C231: 'PT2': redefinition
+D:\KEIL\C51\INC\REG52.H(74): error C231: 'PS': redefinition
+D:\KEIL\C51\INC\REG52.H(75): error C231: 'PT1': redefinition
+D:\KEIL\C51\INC\REG52.H(76): error C231: 'PX1': redefinition
+D:\KEIL\C51\INC\REG52.H(77): error C231: 'PT0': redefinition
+D:\KEIL\C51\INC\REG52.H(78): error C231: 'PX0': redefinition
+D:\KEIL\C51\INC\REG52.H(81): error C231: 'RD': redefinition
+D:\KEIL\C51\INC\REG52.H(82): error C231: 'WR': redefinition
+D:\KEIL\C51\INC\REG52.H(83): error C231: 'T1': redefinition
+D:\KEIL\C51\INC\REG52.H(84): error C231: 'T0': redefinition
+D:\KEIL\C51\INC\REG52.H(85): error C231: 'INT1': redefinition
+D:\KEIL\C51\INC\REG52.H(86): error C231: 'INT0': redefinition
+D:\KEIL\C51\INC\REG52.H(87): error C231: 'TXD': redefinition
+D:\KEIL\C51\INC\REG52.H(88): error C231: 'RXD': redefinition
+D:\KEIL\C51\INC\REG52.H(91): error C231: 'SM0': redefinition
+D:\KEIL\C51\INC\REG52.H(92): error C231: 'SM1': redefinition
+D:\KEIL\C51\INC\REG52.H(93): error C231: 'SM2': redefinition
+D:\KEIL\C51\INC\REG52.H(94): error C231: 'REN': redefinition
+D:\KEIL\C51\INC\REG52.H(95): error C231: 'TB8': redefinition
+D:\KEIL\C51\INC\REG52.H(96): error C231: 'RB8': redefinition
+D:\KEIL\C51\INC\REG52.H(97): error C231: 'TI': redefinition
+D:\KEIL\C51\INC\REG52.H(98): error C231: 'RI': redefinition
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+D:\KEIL\C51\INC\REG52.H(13): error C231: 'P0': redefinition
+D:\KEIL\C51\INC\REG52.H(14): error C231: 'P1': redefinition
+D:\KEIL\C51\INC\REG52.H(15): error C231: 'P2': redefinition
+D:\KEIL\C51\INC\REG52.H(16): error C231: 'P3': redefinition
+D:\KEIL\C51\INC\REG52.H(17): error C231: 'PSW': redefinition
+D:\KEIL\C51\INC\REG52.H(18): error C231: 'ACC': redefinition
+D:\KEIL\C51\INC\REG52.H(19): error C231: 'B': redefinition
+D:\KEIL\C51\INC\REG52.H(20): error C231: 'SP': redefinition
+D:\KEIL\C51\INC\REG52.H(21): error C231: 'DPL': redefinition
+D:\KEIL\C51\INC\REG52.H(22): error C231: 'DPH': redefinition
+D:\KEIL\C51\INC\REG52.H(23): error C231: 'PCON': redefinition
+D:\KEIL\C51\INC\REG52.H(24): error C231: 'TCON': redefinition
+D:\KEIL\C51\INC\REG52.H(25): error C231: 'TMOD': redefinition
+D:\KEIL\C51\INC\REG52.H(26): error C231: 'TL0': redefinition
+D:\KEIL\C51\INC\REG52.H(27): error C231: 'TL1': redefinition
+D:\KEIL\C51\INC\REG52.H(28): error C231: 'TH0': redefinition
+D:\KEIL\C51\INC\REG52.H(29): error C231: 'TH1': redefinition
+D:\KEIL\C51\INC\REG52.H(30): error C231: 'IE': redefinition
+D:\KEIL\C51\INC\REG52.H(31): error C231: 'IP': redefinition
+D:\KEIL\C51\INC\REG52.H(32): error C231: 'SCON': redefinition
+D:\KEIL\C51\INC\REG52.H(33): error C231: 'SBUF': redefinition
+D:\KEIL\C51\INC\REG52.H(45): error C231: 'CY': redefinition
+D:\KEIL\C51\INC\REG52.H(46): error C231: 'AC': redefinition
+D:\KEIL\C51\INC\REG52.H(47): error C231: 'F0': redefinition
+D:\KEIL\C51\INC\REG52.H(48): error C231: 'RS1': redefinition
+D:\KEIL\C51\INC\REG52.H(49): error C231: 'RS0': redefinition
+D:\KEIL\C51\INC\REG52.H(50): error C231: 'OV': redefinition
+D:\KEIL\C51\INC\REG52.H(51): error C231: 'P': redefinition
+D:\KEIL\C51\INC\REG52.H(54): error C231: 'TF1': redefinition
+D:\KEIL\C51\INC\REG52.H(55): error C231: 'TR1': redefinition
+D:\KEIL\C51\INC\REG52.H(56): error C231: 'TF0': redefinition
+D:\KEIL\C51\INC\REG52.H(57): error C231: 'TR0': redefinition
+D:\KEIL\C51\INC\REG52.H(58): error C231: 'IE1': redefinition
+D:\KEIL\C51\INC\REG52.H(59): error C231: 'IT1': redefinition
+D:\KEIL\C51\INC\REG52.H(60): error C231: 'IE0': redefinition
+D:\KEIL\C51\INC\REG52.H(61): error C231: 'IT0': redefinition
+D:\KEIL\C51\INC\REG52.H(64): error C231: 'EA': redefinition
+D:\KEIL\C51\INC\REG52.H(65): error C231: 'ET2': redefinition
+D:\KEIL\C51\INC\REG52.H(66): error C231: 'ES': redefinition
+D:\KEIL\C51\INC\REG52.H(67): error C231: 'ET1': redefinition
+D:\KEIL\C51\INC\REG52.H(68): error C231: 'EX1': redefinition
+D:\KEIL\C51\INC\REG52.H(69): error C231: 'ET0': redefinition
+D:\KEIL\C51\INC\REG52.H(70): error C231: 'EX0': redefinition
+D:\KEIL\C51\INC\REG52.H(73): error C231: 'PT2': redefinition
+D:\KEIL\C51\INC\REG52.H(74): error C231: 'PS': redefinition
+D:\KEIL\C51\INC\REG52.H(75): error C231: 'PT1': redefinition
+D:\KEIL\C51\INC\REG52.H(76): error C231: 'PX1': redefinition
+D:\KEIL\C51\INC\REG52.H(77): error C231: 'PT0': redefinition
+D:\KEIL\C51\INC\REG52.H(78): error C231: 'PX0': redefinition
+D:\KEIL\C51\INC\REG52.H(81): error C231: 'RD': redefinition
+D:\KEIL\C51\INC\REG52.H(82): error C231: 'WR': redefinition
+D:\KEIL\C51\INC\REG52.H(83): error C231: 'T1': redefinition
+D:\KEIL\C51\INC\REG52.H(84): error C231: 'T0': redefinition
+D:\KEIL\C51\INC\REG52.H(85): error C231: 'INT1': redefinition
+D:\KEIL\C51\INC\REG52.H(86): error C231: 'INT0': redefinition
+D:\KEIL\C51\INC\REG52.H(87): error C231: 'TXD': redefinition
+D:\KEIL\C51\INC\REG52.H(88): error C231: 'RXD': redefinition
+D:\KEIL\C51\INC\REG52.H(91): error C231: 'SM0': redefinition
+D:\KEIL\C51\INC\REG52.H(92): error C231: 'SM1': redefinition
+D:\KEIL\C51\INC\REG52.H(93): error C231: 'SM2': redefinition
+D:\KEIL\C51\INC\REG52.H(94): error C231: 'REN': redefinition
+D:\KEIL\C51\INC\REG52.H(95): error C231: 'TB8': redefinition
+D:\KEIL\C51\INC\REG52.H(96): error C231: 'RB8': redefinition
+D:\KEIL\C51\INC\REG52.H(97): error C231: 'TI': redefinition
+D:\KEIL\C51\INC\REG52.H(98): error C231: 'RI': redefinition
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling csb.c...
+linking...
+Program Size: data=34.1 xdata=0 code=2042
+creating hex file from "csb"...
+"csb" - 0 Error(s), 0 Warning(s).

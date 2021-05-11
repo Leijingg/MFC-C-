@@ -1,0 +1,333 @@
+C51 COMPILER V9.60.0.0   CSB                                                               05/08/2021 15:57:46 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE CSB
+OBJECT MODULE PLACED IN csb.OBJ
+COMPILER INVOKED BY: H:\C51\BIN\C51.EXE csb.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <reg52.h>        
+   2          #define uchar unsigned char  //无符号字符型 宏定义  变量范围0~255
+   3          #define uint  unsigned int   //无符号整型 宏定义  变量范围0~65535
+   4          #include <intrins.h>
+   5          #include "eeprom52.h"
+   6          //数码管段选定义      0     1    2    3    4    5   6    7     8    9 
+   7          uchar code smg_du[]={0x28,0xee,0x32,0xa2,0xe4,0xa1,0x21,0xea,0x20,0xa0,
+   8                               0x60,0x25,0x39,0x26,0x31,0x71,0xff};  //段码
+   9          uchar dis_smg[8]   ={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8};
+  10          
+  11          //数码管位选定义
+  12          sbit smg_we1 = P3^4;      //数码管位选定义
+  13          sbit smg_we2 = P3^5;
+  14          sbit smg_we3 = P3^6;
+  15          sbit smg_we4 = P3^7;
+  16          
+  17          sbit c_send   = P3^2;   //超声波发射  
+  18          sbit c_recive = P3^3;   //超声波接收
+  19          
+  20          sbit beep = P2^3;   //蜂鸣器IO口定义
+  21          uchar smg_i = 3;    //显示数码管的个位数
+  22          bit flag_300ms ;
+  23          
+  24          long distance;          //距离
+  25          uint set_d;             //距离
+  26          uchar flag_csb_juli;    //超声波超出量程
+  27          uint  flag_time0;       //用来保存定时器0的时候的
+  28          
+  29          uchar menu_1;           //菜单设计的变量
+  30          
+  31          
+  32          /***********************1ms延时函数*****************************/
+  33          void delay_1ms(uint q)
+  34          {
+  35   1        uint i,j;
+  36   1        for(i=0;i<q;i++)
+  37   1          for(j=0;j<120;j++);
+  38   1      }
+  39          
+  40          /***********************处理距离函数****************************/
+  41          void smg_display()
+  42          {
+  43   1        dis_smg[0] = smg_du[distance % 10];
+  44   1        dis_smg[1] = smg_du[distance / 10 % 10];
+  45   1        dis_smg[2] = smg_du[distance / 100 % 10] & 0xdf; ;  
+  46   1      }
+  47          
+  48          /******************把数据保存到单片机内部eeprom中******************/
+  49          void write_eeprom()
+  50          {
+  51   1        SectorErase(0x2000);
+  52   1        byte_write(0x2000, set_d % 256);
+  53   1        byte_write(0x2001, set_d / 256);
+  54   1        byte_write(0x2058, a_a);  
+  55   1      }
+C51 COMPILER V9.60.0.0   CSB                                                               05/08/2021 15:57:46 PAGE 2   
+
+  56          
+  57          /******************把数据从单片机内部eeprom中读出来*****************/
+  58          void read_eeprom()
+  59          {
+  60   1        set_d  = byte_read(0x2001);
+  61   1        set_d <<= 8;
+  62   1        set_d  |= byte_read(0x2000);
+  63   1        a_a      = byte_read(0x2058);
+  64   1      }
+  65          
+  66          /**************开机自检eeprom初始化*****************/
+  67          void init_eeprom()
+  68          {
+  69   1        read_eeprom();    //先读
+  70   1        if(a_a != 1)    //新的单片机初始单片机内问eeprom
+  71   1        {
+  72   2          set_d = 50;
+  73   2          a_a = 1;
+  74   2          write_eeprom();    //保存数据
+  75   2        } 
+  76   1      }
+  77          
+  78          /********************独立按键程序*****************/
+  79          uchar key_can;   //按键值
+  80          
+  81          void key()   //独立按键程序
+  82          {
+  83   1        static uchar key_new;
+  84   1        key_can = 20;                   //按键值还原
+  85   1        P2 |= 0x07;
+  86   1        if((P2 & 0x07) != 0x07)   //按键按下
+  87   1        {
+  88   2          delay_1ms(1);       //按键消抖动
+  89   2          if(((P2 & 0x07) != 0x07) && (key_new == 1))
+  90   2          {           //确认是按键按下
+  91   3            key_new = 0;
+  92   3            switch(P2 & 0x07)
+  93   3            {
+  94   4              case 0x06: key_can = 3; break;     //得到k2键值
+  95   4              case 0x05: key_can = 2; break;     //得到k3键值
+  96   4              case 0x03: key_can = 1; break;     //得到k4键值
+  97   4            }
+  98   3          }     
+  99   2        }
+ 100   1        else 
+ 101   1          key_new = 1;  
+ 102   1      }
+ 103          
+ 104          /****************按键处理显示函数***************/
+ 105          void key_with()
+ 106          {
+ 107   1        if(key_can == 1)    //设置键
+ 108   1        {
+ 109   2          menu_1 ++;
+ 110   2          if(menu_1 >= 2)
+ 111   2          {
+ 112   3            menu_1 = 0;
+ 113   3            smg_i = 3;    //只显示3位数码管 
+ 114   3          }
+ 115   2          if(menu_1 == 1)
+ 116   2          {
+ 117   3            smg_i = 4;     //只显示4位数码管 
+C51 COMPILER V9.60.0.0   CSB                                                               05/08/2021 15:57:46 PAGE 3   
+
+ 118   3          }
+ 119   2        }
+ 120   1        if(menu_1 == 1)     //设置报警
+ 121   1        {
+ 122   2          if(key_can == 2)
+ 123   2          {
+ 124   3            set_d ++ ;    //加1
+ 125   3            if(set_d > 400)
+ 126   3              set_d = 400;
+ 127   3          }
+ 128   2          if(key_can == 3)
+ 129   2          {
+ 130   3            set_d -- ;    //减1
+ 131   3            if(set_d <= 1)
+ 132   3              set_d = 1;
+ 133   3          }
+ 134   2          dis_smg[0] = smg_du[set_d % 10];             //取小数显示
+ 135   2          dis_smg[1] = smg_du[set_d / 10 % 10] ;         //取个位显示
+ 136   2          dis_smg[2] = smg_du[set_d / 100 % 10] & 0xdf ; //取十位显示
+ 137   2          dis_smg[3] = 0x60;          //a
+ 138   2          write_eeprom();        //保存数据
+ 139   2        } 
+ 140   1      }  
+ 141          
+ 142          /****************报警函数***************/
+ 143          void clock_h_l()
+ 144          {
+ 145   1        static uchar value;
+ 146   1        if(distance <= set_d)
+ 147   1        {
+ 148   2          value ++;  //消除实际距离在设定距离左右变化时的干扰
+ 149   2          if(value >= 2)
+ 150   2          {
+ 151   3            beep = 0;     //蜂鸣器报警  
+ 152   3          }
+ 153   2        }
+ 154   1        else 
+ 155   1        {
+ 156   2          value = 0; 
+ 157   2          beep = 1;   //取消报警
+ 158   2        } 
+ 159   1      }
+ 160          
+ 161          /***********************数码位选函数*****************************/
+ 162          void smg_we_switch(uchar i)
+ 163          {
+ 164   1        switch(i)
+ 165   1        {
+ 166   2          case 0: smg_we1 = 0;  smg_we2 = 1; smg_we3 = 1;  smg_we4 = 1; break;
+ 167   2          case 1: smg_we1 = 1;  smg_we2 = 0; smg_we3 = 1;  smg_we4 = 1; break;
+ 168   2          case 2: smg_we1 = 1;  smg_we2 = 1; smg_we3 = 0;  smg_we4 = 1; break;
+ 169   2          case 3: smg_we1 = 1;  smg_we2 = 1; smg_we3 = 1;  smg_we4 = 0; break;
+ 170   2        } 
+ 171   1      }
+ 172          
+ 173          /***********************数码显示函数*****************************/
+ 174          void display()
+ 175          {
+ 176   1        static uchar i;   
+ 177   1        i++;
+ 178   1        if(i >= smg_i)
+ 179   1          i = 0;  
+C51 COMPILER V9.60.0.0   CSB                                                               05/08/2021 15:57:46 PAGE 4   
+
+ 180   1        smg_we_switch(i);    //位选
+ 181   1        P1 = dis_smg[i];     //段选         
+ 182   1      }
+ 183          
+ 184          /******************小延时函数*****************/
+ 185          void delay()
+ 186          {
+ 187   1        _nop_();               //执行一条_nop_()指令就是1us
+ 188   1        _nop_(); 
+ 189   1        _nop_(); 
+ 190   1        _nop_(); 
+ 191   1        _nop_(); 
+ 192   1      //  _nop_(); 
+ 193   1      //  _nop_(); 
+ 194   1      //  _nop_(); 
+ 195   1      //  _nop_();  
+ 196   1      //  _nop_(); 
+ 197   1      }
+ 198          
+ 199          
+ 200          /*********************超声波测距程序*****************************/
+ 201          void send_wave()
+ 202          {
+ 203   1        c_send = 1;              //10us的高电平触发 
+ 204   1        delay();
+ 205   1        c_send = 0;  
+ 206   1        TH0 = 0;              //给定时器0清零
+ 207   1        TL0 = 0;
+ 208   1        TR0 = 0;          //关定时器0定时
+ 209   1        while(!c_recive);     //当c_recive为零时等待
+ 210   1        TR0=1;
+ 211   1        while(c_recive)         //当c_recive为1计数并等待
+ 212   1        {
+ 213   2          flag_time0 = TH0 * 256 + TL0;
+ 214   2          if((flag_time0 > 40000))      //当超声波超过测量范围时，显示3个888
+ 215   2          {
+ 216   3            TR0 = 0;
+ 217   3            flag_csb_juli = 2;
+ 218   3            distance = 888;
+ 219   3            break ;   
+ 220   3          }
+ 221   2          else 
+ 222   2          {
+ 223   3            flag_csb_juli = 1;  
+ 224   3          }
+ 225   2        }
+ 226   1        if(flag_csb_juli == 1)
+ 227   1        { 
+ 228   2          TR0=0;               //关定时器0定时
+ 229   2          distance =flag_time0;      //读出定时器0的时间
+ 230   2          distance *= 0.017;               // 0.017 = 340M / 2 = 170M = 0.017M 算出来是米
+ 231   2          if((distance > 500))         //距离 = 速度 * 时间
+ 232   2          { 
+ 233   3            distance = 888;        //如果大于3.8m就超出超声波的量程 
+ 234   3          }
+ 235   2        }  
+ 236   1      }
+ 237          
+ 238          
+ 239          /*********************定时器0、定时器1初始化******************/
+ 240          void time_init()    
+ 241          {
+C51 COMPILER V9.60.0.0   CSB                                                               05/08/2021 15:57:46 PAGE 5   
+
+ 242   1        EA  = 1;      //开总中断
+ 243   1        TMOD = 0X11;  //定时器0、定时器1工作方式1
+ 244   1        ET0 = 0;      //关定时器0中断 
+ 245   1        TR0 = 1;      //允许定时器0定时
+ 246   1        ET1 = 1;      //开定时器1中断 
+ 247   1        TR1 = 1;      //允许定时器1定时 
+ 248   1      }
+ 249          
+ 250          
+ 251          
+ 252          /***************主函数*****************/
+ 253          void main()
+ 254          {
+ 255   1        beep = 1;    //0开机叫一声   
+ 256   1        delay_1ms(150);//叫的时间
+ 257   1        P0 = P1 = P2 = P3 = 0xff;    //初始化单片机IO口为高电平
+ 258   1        send_wave();  //测距离函数
+ 259   1        smg_display();  //处理距离显示函数
+ 260   1        time_init();  //定时器初始化程序
+ 261   1        init_eeprom();  //开始初始化保存的数据
+ 262   1        send_wave();  //测距离函数
+ 263   1        send_wave();  //测距离函数
+ 264   1        while(1)
+ 265   1        {     
+ 266   2          if(flag_300ms == 1)
+ 267   2          {   
+ 268   3            flag_300ms = 0;
+ 269   3            clock_h_l();    //报警函数
+ 270   3            if(beep == 1)
+ 271   3              send_wave();  //测距离函数
+ 272   3            if(menu_1 == 0)
+ 273   3              smg_display();   //处理距离显示函数
+ 274   3          }
+ 275   2          key();           //按键函数
+ 276   2          if(key_can < 10)
+ 277   2          {
+ 278   3            key_with();      //按键处理函数
+ 279   3          }
+ 280   2        }
+ 281   1      }
+ 282          
+ 283          /*********************定时器1中断服务程序************************/
+ 284          void time1_int() interrupt 3
+ 285          { 
+ 286   1        static uchar value;      //定时2ms中断一次
+ 287   1        TH1 = 0xf8;
+ 288   1        TL1 = 0x30;     //2ms
+ 289   1        display();    //数码管显示函数
+ 290   1        value++;
+ 291   1        if(value >= 150)
+ 292   1        {
+ 293   2          value = 0;
+ 294   2          flag_300ms = 1;
+ 295   2        }
+ 296   1      }
+ 297          
+ 298          
+ 299          
+ 300          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+C51 COMPILER V9.60.0.0   CSB                                                               05/08/2021 15:57:46 PAGE 6   
+
+   CODE SIZE        =   1035    ----
+   CONSTANT SIZE    =     17    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     25    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
